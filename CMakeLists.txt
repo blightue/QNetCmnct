@@ -21,9 +21,12 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        tcpclientwindow.cpp
-        tcpclientwindow.h
-        tcpclientwindow.ui
+        tcpserverwidget.cpp
+        tcpserverwidget.h
+        tcpserverwidget.ui
+        tcpclientwidget.h
+        tcpclientwidget.cpp
+        tcpclientwidget.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
