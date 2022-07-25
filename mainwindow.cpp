@@ -29,6 +29,8 @@ void MainWindow::on_actionClient_triggered()
     TCPClientWidget * clientWidget = new TCPClientWidget();
 
     m_TabWidget->addTab(clientWidget, "Client" + QString::number(clientCount ++));
+
+    m_TabWidget->setCurrentWidget(clientWidget);
 }
 
 
@@ -37,5 +39,7 @@ void MainWindow::on_actionServer_triggered()
     TCPServerWidget * serverWidget = new TCPServerWidget(defaultPort ++);
 
     m_TabWidget->addTab(serverWidget, "Server " + QString::number(clientCount ++));
+
+    m_TabWidget->setCurrentWidget(serverWidget);
 }
 

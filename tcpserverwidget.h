@@ -26,6 +26,8 @@ private slots:
 
     void on_stopLisBtn_clicked();
 
+    void on_disConButton_clicked();
+
 private:
     Ui::TCPServerWidget *ui;
     QTcpServer * m_Server;

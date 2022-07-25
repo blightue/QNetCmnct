@@ -27,6 +27,8 @@ set(PROJECT_SOURCES
         tcpclientwidget.h
         tcpclientwidget.cpp
         tcpclientwidget.ui
+        textwithtime.h
+        textwithtime.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

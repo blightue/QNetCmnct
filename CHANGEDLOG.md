@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+
+
+## [0.2.0]-2022-7-25
+
+### Update
+
+- Auto open tab after create new tab
+- TCP client and server tab widget redesign
+- New class TextWithTime
+
+### Added
+
+- Add disconnect button on server widget
+- History log now include time
+
 ## [0.1.0]-2022-7-23
 
 ### Added
