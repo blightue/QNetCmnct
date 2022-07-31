@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "tcpclientwidget.h"
+#include "startwidget.h"
 
 #include <QVBoxLayout>
 
@@ -11,9 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
 
   m_TabWidget = new QTabWidget(this);
 
-  TCPServerWidget *serverWidget = new TCPServerWidget(defaultPort++);
+  //TCPServerWidget *serverWidget = new TCPServerWidget(defaultPort++);
 
-  m_TabWidget->addTab(serverWidget, "Server " + QString::number(clientCount++));
+  //m_TabWidget->addTab(serverWidget, "Server " + QString::number(clientCount++));
+
+  StartWidget *start = new StartWidget();
+
+  m_TabWidget->addTab(start,"Get Start");
 
   this->setCentralWidget(m_TabWidget);
   this->show();

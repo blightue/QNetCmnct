@@ -2,7 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.1]-2022-7-31
 
+### Update
+
+- Redesign GUI
+
+### Added
+
+- Add start panel
 
 ## [0.2.0]-2022-7-25
 

@@ -11,18 +11,21 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    startwidget.cpp \
     tcpclientwidget.cpp \
     tcpserverwidget.cpp \
     textwithtime.cpp
 
 HEADERS += \
     mainwindow.h \
+    startwidget.h \
     tcpclientwidget.h \
     tcpserverwidget.h \
     textwithtime.h
 
 FORMS += \
     mainwindow.ui \
+    startwidget.ui \
     tcpclientwidget.ui \
     tcpserverwidget.ui
 
