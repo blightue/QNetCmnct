@@ -18,10 +18,12 @@ TCPServerWidget::TCPServerWidget(QWidget *parent)
 
     ui->portInput->setText("78900");
 
+
     initWindow();
 }
 
 void TCPServerWidget::initWindow() {
+    m_Socket = nullptr;
     m_Server = new QTcpServer(this);
 
     ui->sendButton->setEnabled(false);
@@ -30,7 +32,7 @@ void TCPServerWidget::initWindow() {
 
     connect(m_Server, &QTcpServer::newConnection, this, [=]() {
         m_Socket = m_Server->nextPendingConnection();
-        ui->statusLable->setText("Status: Connected");
+
         ui->historyMsg->append(TextWithTime::WithTime("Client connected"));
         ui->sendButton->setEnabled(true);
         ui->disConButton->setEnabled(true);
@@ -71,9 +73,9 @@ void TCPServerWidget::on_sendButton_clicked() {
 
 void TCPServerWidget::on_stopLisBtn_clicked() {
     if (m_Socket != nullptr) {
-        //m_Socket->disconnect();
         m_Socket->close();
         m_Socket->deleteLater();
+        m_Socket = nullptr;
     }
     m_Server->close();
     ui->historyMsg->append(

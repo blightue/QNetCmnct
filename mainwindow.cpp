@@ -6,8 +6,8 @@
 #include <QVBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindow), defaultPort(12340),
-      clientCount(0) {
+    : QMainWindow(parent), ui(new Ui::MainWindow), clientCount(0),
+      defaultPort(12340) {
   ui->setupUi(this);
 
   m_TabWidget = new QTabWidget(this);
